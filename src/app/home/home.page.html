@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Genero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <ion-content [fullscreen]="true">
+    <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input #value  type="text"   placeholder="Enter text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" color="primary" (click)="getGenero(value.value)">Primary</ion-button>
+
+    <ion-list >
+      <ion-item *ngIf="info == 'male'" color="primary">{{info}}</ion-item>
+      <ion-item *ngIf="info == 'female'" color="danger">{{info}}</ion-item>
+
+    </ion-list>
+
+  </ion-content>
+
+

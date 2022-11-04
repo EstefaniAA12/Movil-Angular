@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Edades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <ion-content [fullscreen]="true">
+    
+    <ion-list> 
+    <ion-item>
+      <ion-label position="floating">Nombre:</ion-label> 
+      <ion-input #value  type="text"   placeholder="Enter text"></ion-input>
+    </ion-item>
+  </ion-list>
+    <ion-button color="success" (click)="edad(value.value)" expand="block">Block</ion-button>
+    <ion-list >
+      <ion-item >Eres una persona {{message}} de {{info}}</ion-item>
+      
+        <ion-item *ngIf="message =='Joven'">
+          <img src="assets/img/joven.jpg">
+        </ion-item>
+      
+        <ion-item *ngIf="message =='Adulto'">
+          <img src="/assets/img/adulto.jpg" alt="" >
+        </ion-item>
+
+        <ion-item *ngIf="message =='Envejeciente'">
+          <img src="assets/img/viejo.jpg">
+        </ion-item>
+
+    </ion-list>
+   
+  </ion-content>
+  
+
